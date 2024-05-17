@@ -1,3 +1,5 @@
 node_modules 
 conventional-script.sh
-dist
+dist/*
+!dist/.gitkeep
+db/app.db
