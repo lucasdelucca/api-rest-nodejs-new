@@ -1,8 +1,16 @@
-node_modules 
+# Dependencies
+node_modules
+
+# Misc
 conventional-script.sh
+
+# Build
 dist/*
 !dist/.gitkeep
-db/app.db
-db/test.db
+
+# Database
+db/*.db
+
+# Environment
 .env
 .env.test

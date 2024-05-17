@@ -17,20 +17,21 @@
     "json": "^11.0.0",
     "lint-staged": "^15.2.2",
     "supertest": "^7.0.0",
+    "tsup": "^8.0.2",
     "tsx": "^4.10.3",
     "typescript": "^5.4.5",
     "vitest": "^1.6.0"
   },
   "scripts": {
     "prepare": "husky",
-    "build": "tsc",
     "dev": "tsx watch src/server.ts",
     "lint": "eslint --fix src",
     "knex": "node --no-warnings --loader tsx ./node_modules/.bin/knex",
     "mrollback": "yarn knex -- migrate:rollback",
     "mrun": "yarn knex -- migrate:latest",
     "mmake": "yarn knex -- migrate:make",
-    "test": "vitest"
+    "test": "vitest",
+    "build": "tsup src"
   },
   "config": {
     "commitizen": {
