@@ -37,8 +37,10 @@
     "*.js": "eslint --fix"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
     "fastify": "^4.27.0",
     "knex": "^3.1.0",
-    "sqlite3": "^5.1.7"
+    "sqlite3": "^5.1.7",
+    "zod": "^3.23.8"
   }
 }
