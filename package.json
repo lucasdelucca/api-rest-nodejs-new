@@ -22,7 +22,11 @@
     "prepare": "husky",
     "build": "tsc",
     "dev": "tsx watch src/server.ts",
-    "lint": "eslint --fix src"
+    "lint": "eslint --fix src",
+    "knex": "node --no-warnings --loader tsx ./node_modules/.bin/knex",
+    "mrollback": "yarn knex -- migrate:rollback",
+    "mrun": "yarn knex -- migrate:latest",
+    "mmake": "yarn knex -- migrate:make"
   },
   "config": {
     "commitizen": {
@@ -31,5 +35,10 @@
   },
   "lint-staged": {
     "*.js": "eslint --fix"
+  },
+  "dependencies": {
+    "fastify": "^4.27.0",
+    "knex": "^3.1.0",
+    "sqlite3": "^5.1.7"
   }
 }
