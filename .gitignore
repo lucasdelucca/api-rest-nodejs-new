@@ -3,4 +3,6 @@ conventional-script.sh
 dist/*
 !dist/.gitkeep
 db/app.db
+db/test.db
 .env
+.env.test

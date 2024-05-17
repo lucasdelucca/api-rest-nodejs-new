@@ -10,13 +10,16 @@
     "@commitlint/config-conventional": "^19.2.2",
     "@rocketseat/eslint-config": "^2.2.2",
     "@types/node": "^20.12.12",
+    "@types/supertest": "^6.0.2",
     "commitizen": "4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^9.0.11",
     "json": "^11.0.0",
     "lint-staged": "^15.2.2",
+    "supertest": "^7.0.0",
     "tsx": "^4.10.3",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
   },
   "scripts": {
     "prepare": "husky",
@@ -26,7 +29,8 @@
     "knex": "node --no-warnings --loader tsx ./node_modules/.bin/knex",
     "mrollback": "yarn knex -- migrate:rollback",
     "mrun": "yarn knex -- migrate:latest",
-    "mmake": "yarn knex -- migrate:make"
+    "mmake": "yarn knex -- migrate:make",
+    "test": "vitest"
   },
   "config": {
     "commitizen": {
